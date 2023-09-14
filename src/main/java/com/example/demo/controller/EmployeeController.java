@@ -15,13 +15,13 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    @PostMapping("/create")
+    @PostMapping("/employee/create")
     public ResponseEntity<Employee> createEmployee(@RequestBody Employee employee) {
         Employee savedUser = employeeService.createEmployee(employee);
         return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/employee/{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id) {
         Employee employee = employeeService.getEmployeeById(id);
         if (employee == null) {
