@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class EmployeeController {
 
     // This is the controller class
+    // This contains the endpoints
     @Autowired
     private EmployeeService employeeService;
 
